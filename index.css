@@ -1,0 +1,121 @@
+:root {
+    --color1: rgb(17, 24, 32);
+    --color2: rgb(28, 31, 39);
+    --color3 : white;
+    --color4: black;
+}
+
+@font-face {
+    font-family: font;
+    src: url("./Ubuntu-Regular.ttf");
+}
+
+* {
+    font-family: font;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(var(--color1), var(--color2) 50%);
+}
+
+.container {
+    background: var(--color3);
+    margin: 0 auto;
+    margin-top: 150px;
+    height: 150px;
+    width: 15%;
+    border-radius: 15px;
+    padding: 5px;
+    border: 2px solid var(--color1);
+    box-shadow: 5px 5px 20px var(--color4), -5px -5px 20px var(--color4);
+    display: grid;
+    grid-template-areas: 
+    "res res res res res"
+    "seven eight nine C C"
+    "four five six multipl divide"
+    "one two three plus minus"
+    "zer zer . equal equal";
+    grid-column-gap: 2.5px;
+    grid-row-gap: 2.5px;
+}
+
+#resultat {
+    grid-area: res;
+    border: none;
+    height: 30px;
+    outline: none;
+    transition: .2s ease;
+    font-size: .9rem;
+}
+
+.btn, #clear, #equal {
+    border-radius: 5px;
+    background: var(--color1);
+    color: var(--color3);
+}
+
+#zero {
+    grid-area: zer;
+}
+
+#one {
+    grid-area: one;
+}
+
+#two {
+    grid-area: two;
+}
+
+#three {
+    grid-area: three;
+}
+
+#four {
+    grid-area: four;
+}
+
+#five {
+    grid-area: five;
+}
+
+#six {
+    grid-area: six;
+}
+
+#seven {
+    grid-area: seven;
+}
+
+#eight {
+    grid-area: eight;
+}
+
+#nine {
+    grid-area: nine;
+}
+
+#plus {
+    grid-area: plus;
+}
+
+#minus {
+    grid-area: minus;
+}
+
+#multiply {
+    grid-area: multipl;
+}
+
+#divide {
+    grid-area: divide;
+}
+
+#clear {
+    grid-area: C;
+}
+
+#equal {
+    grid-area: equal;
+    background: var(--color2);
+}
