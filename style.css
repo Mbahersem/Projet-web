@@ -1,0 +1,140 @@
+/* Styles généraux */
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+/* Styles pour l'en-tête */
+header {
+    background: linear-gradient(45deg, #b3a4a4, #ded687, #7171c1);
+    background-size: 600% 600%;
+    animation: gradientAnimation 15s ease infinite;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Styles pour les sections */
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    animation: slideInRight 1s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+section div {
+    animation: slideInRight 1.2s ease-in-out;
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+/* Styles pour les formulaires */
+form {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 10px;
+    align-self:center;
+}
+
+input[type="url"],
+textarea {
+    margin-bottom: 20px;
+}
+
+button {
+    align-self:center;
+    display: block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Styles pour les images de code QR */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Styles pour les média queries */
+@media screen and (min-width: 768px) {
+    /* Styles pour les sections */
+    section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px;
+        box-shadow: none;
+        animation: none;
+    }
+
+    /* Styles pour les formulaires */
+    form {
+        width: 45%;
+        margin-bottom: 0;
+        animation: none;
+    }
+
+    /* Styles pour les images de code QR */
+    img {
+        width: 45%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
